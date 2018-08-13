@@ -1,0 +1,26 @@
+{
+    "name": "tilf_/notification",
+    "description": "This is a library that uses composer as the basis for generating email notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tiago Furlan",
+            "email": "tgfurlan@gmail.com",
+            "homepage": "https://www.tiagofurlan.com.br",
+            "role": "CEO and Founder"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.0.1"
+    },
+    "config": {
+        "vendor-dir" : "lib_ext"
+    },
+    "autoload": {
+        "psr-4": {
+            "notification\\": "App"
+        }
+    }
+}
