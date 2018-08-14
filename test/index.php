@@ -1,12 +1,11 @@
 <?php
 
-require_once __DIR__ . '/lib_ext/autoload.php';
+require_once __DIR__ . '/../lib_ext/autoload.php';
 
 use notification\Email;
 
-$novoEmail = new Email;
-$novoEmail->sendMail("Assunto de Teste", "<p>Email de Teste</p>","ti@finziengenharia.com", "Tiago", "tgfurlan@gmail.com", "Tiago L. Furlan");
+$novoEmail = new Email(2, "mail.host.com", "your@email.com", "your-pass", "smtp secure (tls / ssl)", "port (587 / 465)", "from@email.com", "From Name");
+$novoEmail->sendMail("Assunto de Teste", "Corpo do E-mail", "E-mail de Resposta", "Nome para Resposta", "E-mail destinatário", "Nome Destinatário");
 
-echo "<pre>";
+
 var_dump($novoEmail);
-echo "</pre>";
